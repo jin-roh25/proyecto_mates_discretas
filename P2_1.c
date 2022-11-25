@@ -29,10 +29,10 @@
 int main()
 {
 	int **w = malloc(sizeof(int *) * (Gimnasio_MAX + 1));
-	for (int i = 0; i <= Gimnasio_MAX; i++)
+	for (int i = Gimnasio_MIN; i <= Gimnasio_MAX; i++)
 	{
 		w[i] = malloc(sizeof(int) * (Gimnasio_MAX + 1));
-		for (int j = 0; j <= Gimnasio_MAX; j++)
+		for (int j = Gimnasio_MIN; j <= Gimnasio_MAX; j++)
 		{
 			if (i == j)
 				w[i][j] = 0;
@@ -62,9 +62,9 @@ int main()
 	w[Pueblo_Arenisca][Pueblo_Chamota] = 13;
 	w[Ciudad_Mayolica][Ciudad_Porcelana] = 16;
 
-	for (int i = 0; i <= Gimnasio_MAX; i++)
+	for (int i = Gimnasio_MIN; i <= Gimnasio_MAX; i++)
 	{
-		for (int j = 0; j <= Gimnasio_MAX; j++)
+		for (int j = Gimnasio_MIN; j <= Gimnasio_MAX; j++)
 		{
 			if (i != j && w[i][j] != INFINITY)
 			{
